@@ -6,8 +6,8 @@ export const CallbackHook = () => {
     const [counter, setCounter] = useState( 10 );
 
     const incrementFather = useCallback(
-      () => { 
-        setCounter( (currentCounterValue) => currentCounterValue + 1 );
+      (value = 1 ) => { 
+        setCounter( (currentCounterValue) => currentCounterValue + value );
         // se utiliza un callback ya que counter esta memorizado y al usar counter + 1
         // simplemente dado que toma el valor memorizado y renderizado queda en 11
       },
