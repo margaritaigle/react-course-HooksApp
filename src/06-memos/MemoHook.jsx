@@ -15,7 +15,7 @@ export const MemoHook = () => {
    const [show, setShow] = useState(true);
 
    const memorizedValue = useMemo( () => heavyStuff(counter), [counter])
-   // se memoriza el valor cada vez que el valor counter cambia
+   // se memoriza el VALOR cada vez que el valor counter cambia
 
   return (
     <>
