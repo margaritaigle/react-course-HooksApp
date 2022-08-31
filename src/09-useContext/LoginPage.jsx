@@ -1,9 +1,22 @@
+import { useContext } from "react"
+import { UserContext } from "./context/UserContext";
 
 export const LoginPage = () => {
-  return (
-    <>
-        <h1>LoginPage</h1>
-        <hr />
-    </>
-  )
+
+    const { user, setUser } = useContext( UserContext );
+
+
+    return (
+        <>
+            <h1>LoginPage</h1>
+            <hr />
+
+            <pre>{JSON.stringify(user)}</pre>
+
+            <button className="btn btn-primary"
+                    onClick={() => setUser({ id: 123, name: 'Margarita', email: "margarita@gmail.com"})}>
+                Set user
+            </button>
+        </>
+    )
 }
